@@ -83,4 +83,57 @@ describe('Create Tokens', () => {
     console.log(`   Mint Address: ${mintKeypair.publicKey}`);
     console.log(`   Transaction Signature: ${transactionSignature}`);
   });
+
+  it('Burn Token!', async () => {
+    const mintKeypair = new Keypair();
+    
+    // Tạo token mint và mint token như các bước trước
+    await program.methods
+      .createTokenMint(9, metadata.name, metadata.symbol, metadata.uri)
+      .accounts({
+        payer: payer.publicKey,
+        mintAccount: mintKeypair.publicKey,
+      })
+      .signers([mintKeypair])
+      .rpc();
+
+    const tokenAccount = await getAssociatedTokenAddress(
+        mintKeypair.publicKey,
+        payer.publicKey
+    );
+
+    const createATAIx = createAssociatedTokenAccountInstruction(
+        payer.publicKey,
+        tokenAccount,
+        payer.publicKey,
+        mintKeypair.publicKey
+    );
+
+    const transaction = new anchor.web3.Transaction().add(createATAIx);
+    await anchor.web3.sendAndConfirmTransaction(provider.connection, transaction, [payer.payer]);
+
+    await program.methods
+      .mintTo(new BN(metadata.amount))
+      .accounts({
+        mint: mintKeypair.publicKey,
+        tokenAccount: tokenAccount,
+        authority: payer.publicKey,
+      })
+      .rpc();
+
+    // Burn một số lượng token
+    const burnAmount = new BN(1000);
+    await program.methods
+      .burnToken(burnAmount)
+      .accounts({
+        mint: mintKeypair.publicKey,
+        tokenAccount: tokenAccount,
+        authority: payer.publicKey,
+      })
+      .rpc();
+
+    console.log('Success!');
+    console.log(`   Burned Amount: ${burnAmount}`);
+    console.log(`   Token Account: ${tokenAccount}`);
+  });
 });

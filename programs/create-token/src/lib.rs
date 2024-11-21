@@ -7,7 +7,7 @@ use {
             create_metadata_accounts_v3, mpl_token_metadata::types::DataV2,
             CreateMetadataAccountsV3, Metadata,
         },
-        token::{Mint, MintTo, Token, TokenAccount},
+        token::{burn, Burn, Mint, MintTo, Token, TokenAccount},
     },
 };
 
@@ -77,6 +77,20 @@ pub mod create_token {
             amount,
         )
     }
+
+    pub fn burn_token(ctx: Context<BurnToken>, amount: u64) -> Result<()> {
+        burn(
+            CpiContext::new(
+                ctx.accounts.token_program.to_account_info(),
+                Burn {
+                    mint: ctx.accounts.mint.to_account_info(),
+                    from: ctx.accounts.token_account.to_account_info(),
+                    authority: ctx.accounts.authority.to_account_info(),
+                },
+            ),
+            amount,
+        )
+    }
 }
 
 #[derive(Accounts)]
@@ -110,6 +124,16 @@ pub struct CreateTokenMint<'info> {
 
 #[derive(Accounts)]
 pub struct MintToToken<'info> {
+    #[account(mut)]
+    pub mint: Account<'info, Mint>,
+    #[account(mut)]
+    pub token_account: Account<'info, TokenAccount>,
+    pub authority: Signer<'info>,
+    pub token_program: Program<'info, Token>,
+}
+
+#[derive(Accounts)]
+pub struct BurnToken<'info> {
     #[account(mut)]
     pub mint: Account<'info, Mint>,
     #[account(mut)]
