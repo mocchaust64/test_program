@@ -1,0 +1,11 @@
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libsha3-164e3960adfcfd80.rmeta: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/paddings.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/macros.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/reader.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/state.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libsha3-164e3960adfcfd80.rlib: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/paddings.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/macros.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/reader.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/state.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/sha3-164e3960adfcfd80.d: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/paddings.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/macros.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/reader.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/state.rs
+
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/lib.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/paddings.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/macros.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/reader.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sha3-0.9.1/src/state.rs:

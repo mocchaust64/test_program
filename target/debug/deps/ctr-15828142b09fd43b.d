@@ -1,0 +1,11 @@
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libctr-15828142b09fd43b.rmeta: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr128.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr32.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr64.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libctr-15828142b09fd43b.rlib: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr128.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr32.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr64.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/ctr-15828142b09fd43b.d: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr128.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr32.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr64.rs
+
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/lib.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr128.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr32.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ctr-0.8.0/src/flavors/ctr64.rs:

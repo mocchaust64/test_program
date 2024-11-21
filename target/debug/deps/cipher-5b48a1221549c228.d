@@ -1,0 +1,11 @@
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libcipher-5b48a1221549c228.rmeta: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/block.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/common.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/errors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/stream.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/libcipher-5b48a1221549c228.rlib: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/block.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/common.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/errors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/stream.rs
+
+/mnt/d/SolanaProjects/Marketplace/tai/tokens/create-token/anchor/target/debug/deps/cipher-5b48a1221549c228.d: /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/lib.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/block.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/common.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/errors.rs /home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/stream.rs
+
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/lib.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/block.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/common.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/errors.rs:
+/home/mocchaust64/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cipher-0.3.0/src/stream.rs:

@@ -1,0 +1,15 @@
+{
+    "name": "Test Token",
+    "symbol": "TEST",
+    "description": "Token for testing",
+    "image": "https://picsum.photos/200",
+    "attributes": [],
+    "properties": {
+        "files": [
+            {
+                "uri": "https://picsum.photos/200",
+                "type": "image/png"
+            }
+        ]
+    }
+}
