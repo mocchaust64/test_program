@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@coral-xyz/anchor": "^0.30.0",
+    "@solana/spl-token": "^0.4.9",
     "anchor-bankrun": "^0.4.0",
     "solana-bankrun": "^0.2.0"
   },

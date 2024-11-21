@@ -7,7 +7,7 @@ use {
             create_metadata_accounts_v3, mpl_token_metadata::types::DataV2,
             CreateMetadataAccountsV3, Metadata,
         },
-        token::{Mint, Token},
+        token::{Mint, MintTo, Token, TokenAccount},
     },
 };
 
@@ -63,6 +63,20 @@ pub mod create_token {
 
         Ok(())
     }
+
+    pub fn mint_to(ctx: Context<MintToToken>, amount: u64) -> Result<()> {
+        anchor_spl::token::mint_to(
+            CpiContext::new(
+                ctx.accounts.token_program.to_account_info(),
+                MintTo {
+                    mint: ctx.accounts.mint.to_account_info(),
+                    to: ctx.accounts.token_account.to_account_info(),
+                    authority: ctx.accounts.authority.to_account_info(),
+                },
+            ),
+            amount,
+        )
+    }
 }
 
 #[derive(Accounts)]
@@ -92,4 +106,14 @@ pub struct CreateTokenMint<'info> {
     pub token_program: Program<'info, Token>,
     pub system_program: Program<'info, System>,
     pub rent: Sysvar<'info, Rent>,
+}
+
+#[derive(Accounts)]
+pub struct MintToToken<'info> {
+    #[account(mut)]
+    pub mint: Account<'info, Mint>,
+    #[account(mut)]
+    pub token_account: Account<'info, TokenAccount>,
+    pub authority: Signer<'info>,
+    pub token_program: Program<'info, Token>,
 }
