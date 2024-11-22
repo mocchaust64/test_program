@@ -178,6 +178,46 @@ export type CreateToken = {
           "type": "u64"
         }
       ]
+    },
+    {
+      "name": "transferToken",
+      "discriminator": [
+        219,
+        17,
+        122,
+        53,
+        237,
+        171,
+        232,
+        222
+      ],
+      "accounts": [
+        {
+          "name": "mint"
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "to",
+          "writable": true
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "tokenProgram",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
     }
   ]
 };

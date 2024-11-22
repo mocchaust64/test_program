@@ -172,6 +172,46 @@
           "type": "u64"
         }
       ]
+    },
+    {
+      "name": "transfer_token",
+      "discriminator": [
+        219,
+        17,
+        122,
+        53,
+        237,
+        171,
+        232,
+        222
+      ],
+      "accounts": [
+        {
+          "name": "mint"
+        },
+        {
+          "name": "from",
+          "writable": true
+        },
+        {
+          "name": "to",
+          "writable": true
+        },
+        {
+          "name": "authority",
+          "signer": true
+        },
+        {
+          "name": "token_program",
+          "address": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+        }
+      ],
+      "args": [
+        {
+          "name": "amount",
+          "type": "u64"
+        }
+      ]
     }
   ]
 }

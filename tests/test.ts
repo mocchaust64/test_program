@@ -136,4 +136,84 @@ describe('Create Tokens', () => {
     console.log(`   Burned Amount: ${burnAmount}`);
     console.log(`   Token Account: ${tokenAccount}`);
   });
+
+  it('Transfer Token!', async () => {
+    const mintKeypair = new Keypair();
+    const receiverKeypair = new Keypair();
+    
+    // Tạo token mint và mint token như các bước trước
+    await program.methods
+      .createTokenMint(9, metadata.name, metadata.symbol, metadata.uri)
+      .accounts({
+        payer: payer.publicKey,
+        mintAccount: mintKeypair.publicKey,
+      })
+      .signers([mintKeypair])
+      .rpc();
+
+    // Tạo token account cho người gửi (payer)
+    const fromTokenAccount = await getAssociatedTokenAddress(
+        mintKeypair.publicKey,
+        payer.publicKey
+    );
+
+    // Tạo token account cho người nhận
+    const toTokenAccount = await getAssociatedTokenAddress(
+        mintKeypair.publicKey,
+        receiverKeypair.publicKey
+    );
+
+    // Tạo ATA cho người gửi
+    const createFromATAIx = createAssociatedTokenAccountInstruction(
+        payer.publicKey,
+        fromTokenAccount,
+        payer.publicKey,
+        mintKeypair.publicKey
+    );
+
+    // Tạo ATA cho người nhận
+    const createToATAIx = createAssociatedTokenAccountInstruction(
+        payer.publicKey,
+        toTokenAccount,
+        receiverKeypair.publicKey,
+        mintKeypair.publicKey
+    );
+
+    const transaction = new anchor.web3.Transaction()
+        .add(createFromATAIx)
+        .add(createToATAIx);
+    
+    await anchor.web3.sendAndConfirmTransaction(
+        provider.connection, 
+        transaction, 
+        [payer.payer]
+    );
+
+    // Mint token cho người gửi
+    await program.methods
+      .mintTo(new BN(metadata.amount))
+      .accounts({
+        mint: mintKeypair.publicKey,
+        tokenAccount: fromTokenAccount,
+        authority: payer.publicKey,
+      })
+      .rpc();
+
+    // Transfer token
+    const transferAmount = new BN(1000);
+    await program.methods
+      .transferToken(transferAmount)
+      .accounts({
+        mint: mintKeypair.publicKey,
+        from: fromTokenAccount,
+        to: toTokenAccount,
+        authority: payer.publicKey,
+      })
+      .rpc();
+
+    console.log('Success!');
+    console.log(`   Transfer Amount: ${transferAmount}`);
+    console.log(`   From Account: ${fromTokenAccount}`);
+    console.log(`   To Account: ${toTokenAccount}`);
+  });
 });
